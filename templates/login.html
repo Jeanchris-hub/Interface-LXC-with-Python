@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Connexion Admin</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        .logo {
+            margin-bottom: 1.5rem;
+        }
+
+        .logo img {
+            max-width: 100px;
+            border-radius: 50%; /* Optionnel pour rendre le logo circulaire */
+        }
+
+        h1 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: bold;
+            text-align: left;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        input:focus {
+            border-color: #007BFF;
+            outline: none;
+            box-shadow: 0 0 3px rgba(0, 123, 255, 0.5);
+        }
+
+        button {
+            width: 100%;
+            padding: 0.8rem;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        p {
+            text-align: center;
+            color: red;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <img src="/static/image/Linux_Containers_logo.svg.png" alt="Logo LXC">
+        </div>
+        <h1>Connexion Admin</h1>
+        <form action="{{ url_for('login') }}" method="POST">
+            <label for="username">Nom d'utilisateur :</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Mot de passe :</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Se connecter</button>
+        </form>
+        {% if error %}
+        <p>{{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

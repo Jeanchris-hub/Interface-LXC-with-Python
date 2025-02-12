@@ -1,0 +1,304 @@
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 85, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 85, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 85, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 85, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 85, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 849-299-116
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 849-299-116
+INFO:werkzeug:[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+INFO:werkzeug:[33mPress CTRL+C to quit[0m
+INFO:werkzeug: * Restarting with stat
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 849-299-116
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 85, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 72, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 72, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 72, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 72, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable
+ERROR:modules.contenaires:Erreur dans get_available_images: 'Image' object has no attribute 'description'
+ERROR:app:Exception on /admin [GET]
+Traceback (most recent call last):
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+  File "/home/chris/.local/lib/python3.9/site-packages/flask_login/utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "/home/chris/Documents/Projet/app.py", line 72, in admin_dashboard
+    return render_template('index.html', data=container_data, images=images)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 150, in render_template
+    return _render(app, template, context)
+  File "/home/chris/.local/lib/python3.9/site-packages/flask/templating.py", line 131, in _render
+    rv = template.render(context)
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 1304, in render
+    self.environment.handle_exception()
+  File "/home/chris/.local/lib/python3.9/site-packages/jinja2/environment.py", line 939, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/home/chris/Documents/Projet/templates/index.html", line 33, in top-level template code
+    {% for image in images %}
+TypeError: 'NoneType' object is not iterable

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LXD Containers - Admin Dashboard</title>
+    <!-- Include Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Include Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container mt-5">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Admin Dashboard</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="{{ url_for('admin_dashboard') }}">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('images_dashboard') }}">Images</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('add_user') }}">Add User</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <h1 class="text-center mt-4">LXD Containers - Admin Dashboard</h1>
+        <hr class="mb-4">
+        
+        <!-- Form to create a new container -->
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <h2 class="card-title mb-0">Create a New Container</h2>
+            </div>
+            <div class="card-body">
+                <form action="{{ url_for('create_container') }}" method="POST">
+                    <div class="mb-3">
+                        <input type="text" name="name" class="form-control" placeholder="Nom du Conteneur" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="image" class="form-label">Choisissez une Image</label>
+                        <select name="image" class="form-control" required>
+                            {% for image in images %}
+                            <option value="{{ image['alias'] }}">{{ image['alias'] }}  {{ image['architecture'] }}</option>
+                            {% endfor %}
+                        </select>
+                        <a href="{{ url_for('images_dashboard') }}" class="btn btn-success mt-2">Voir la liste des Images</a>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <input type="number" name="cpu_limit" class="form-control" placeholder="Limite CPU (e.g., 2)">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="memory_limit" class="form-control" placeholder="Limite Mémoire (e.g., 512MB)">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Créer le Conteneur</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Containers List -->
+        <h3 class="text-center mb-4">Containers List</h3>
+        <table class="table table-striped table-hover">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>State</th>
+                    <th>IPv4</th>
+                    <th>IPv6</th>
+                    <th>Snapshots</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in data %}
+                <tr>
+                    <td>{{ row['name'] }}</td>
+                    <td>
+                        {% if row['state'] == 'Running' %}
+                        <span class="badge bg-success">Running</span>
+                        {% else %}
+                        <span class="badge bg-danger">Stopped</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ row['ipv4'] }}</td>
+                    <td>{{ row['ipv6'] }}</td>
+                    <td>{{ row['snapshot'] }}</td>
+                    <td>
+                        <form action="{{ url_for('stop_container', container_name=row['name']) }}" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-warning btn-sm" {% if row['state'] == 'Stopped' %} disabled {% endif %}>Stop</button>
+                        </form>
+                        <form action="{{ url_for('start_container', container_name=row['name']) }}" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-success btn-sm" {% if row['state'] == 'Running' %} disabled {% endif %}>Start</button>
+                        </form>
+                        <form action="{{ url_for('delete_container', container_name=row['name']) }}" method="post" class="d-inline">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('snapshots', container_name=row['name']) }}" class="btn btn-info btn-sm">Snapshots</a>
+                    </td>
+                    <td>
+                        <a href="{{ url_for('container_details', container_name=row['name']) }}" class="btn btn-secondary btn-sm">Details</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <!-- Success Message -->
+        {% if message %}
+        <div class="alert alert-success text-center">{{ message }}</div>
+        {% endif %}
+        {% if error %}
+        <div class="alert alert-danger">{{ error }}</div>
+        {% endif %}
+
+
+        <!-- Logout -->
+        <div class="text-center mt-4">
+            <a href="{{ url_for('logout') }}" class="logout-link">Logout</a>
+        </div>
+    </div>
+
+    <!-- Include Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+
+</body>
+</html>
